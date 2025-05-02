@@ -1,0 +1,201 @@
+.analytics-container{
+  display: inline-block;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+   width: 60%;
+   align-self: center;
+    margin-top: -55%;
+    margin-left: 10%;
+    margin-right: 20%;
+   
+    padding: 10px;
+    
+}
+.main-heading{
+    display: flex;
+    font-family: Inter;
+  color: #6A6B70;
+   
+}
+.Graph-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 5%;
+    margin-left: 5%;
+   font-size: 34px;
+}
+.charts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    border: 1px solid black;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.headings{
+    display: flex;
+    color: #00D907;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+.Average-reply{
+  display: flex;
+  gap: 70px;
+
+
+
+}
+.Average-reply-content{
+  margin-top: -1%;
+}
+.Average-reply span{
+  color: #00D907;
+  font-size: 30px;
+  margin-top: -1%;
+}
+.Resolved-tickets{
+  display:flex;
+    gap: 70px;
+}
+.Total-chats{
+  display:flex;
+  flex: 1;
+    gap: 70px;
+}
+.Total-chats span{
+  color: #00D907;
+  font-size: 30px;
+  align-items: flex-end;
+ 
+}
+@media screen and (max-width: 768px) {
+    .analytics-container{
+        width: 100%;
+        margin-top: -220%;
+        margin-left: 42%;
+        margin-right: 0;
+    }
+    .charts{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .heading{
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+    .Average-reply{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Resolved-tickets{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Total-chats{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Average-reply-content{
+        margin-top: 0;
+    }
+    .Average-reply span{
+        margin-top: 0;
+    }
+    .Total-chats span{
+        margin-top: 0;
+    }
+    .headings{
+        font-size: 24px;
+    }
+    .Graph-header{
+        font-size: 24px;
+    }
+    .main-heading{
+        font-size: 24px;
+    }
+    .charts{
+        margin-left: 0;
+        margin-top: 0;
+    }     
+    .heading{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .headings{
+        font-size: 24px;
+    }
+    .Graph-header{
+        font-size: 24px;
+    }
+    .main-heading{
+        font-size: 24px;
+    }
+    .charts{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .heading{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .Average-reply-content{
+        margin-top: 0;
+    }
+    .Average-reply span{
+        margin-top: 0;
+    }
+    .Total-chats span{
+        margin-top: 0;
+    }
+    .Total-chats{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Resolved-tickets{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Average-reply{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .heading{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .charts{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Graph-header{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-heading{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+  
+}

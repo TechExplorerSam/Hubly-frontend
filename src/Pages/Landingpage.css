@@ -1,0 +1,299 @@
+
+.landingpage_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    margin: 5%;
+    padding: 5%;
+    align-items: center;
+   
+    
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -42%;
+   
+  }
+  
+  .heading1 {
+    font-family: Barlow;
+    font-size: 50px;
+    color: #244779;
+  }
+  
+  .landingpage_container p {
+    font-family: Barlow;
+    font-size: 20px;
+    color: #244779;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+  
+  .button_container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+   
+  }
+  
+  .btn {
+    background-color: #244779;
+    border: none;
+    cursor: pointer;
+    font-family: Barlow;
+    font-size: 22px;
+    color: white;
+    padding: 15px 20px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    
+  }
+  
+  .btn2 {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Barlow;
+    font-size: 22px;
+    color: #30404D;
+    display: inline-flex;
+    align-items: center;
+  }
+  .img{
+   
+    height: auto;
+    object-fit: contain;
+    margin-left: 65%;
+    margin-top: -10%;
+     position: relative;
+     box-shadow: rgb(0, 191, 255);
+    z-index: 1;
+   
+  }
+  .img1 {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin-left: 15%;
+    margin-top: -10%;
+  }
+  
+  .img2{
+   
+    height: auto;
+    object-fit: contain;
+    margin-left: 5%;
+    margin-top: -22%;
+  }
+  .img3{
+  
+    
+    object-fit: contain;
+    margin-left: 5%;
+    margin-top: -14%;
+  }
+
+ 
+.section1{
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+    gap: 5%;
+    margin-left: -5%;
+    padding: 5%;
+    align-items: center;
+    justify-items: center;
+    
+    width: 100%;
+   
+   
+ 
+}
+.img4{
+    width: 100%;
+    grid-column: 1 / -1;
+   margin-top: -12%;
+    
+}
+
+.heading2{
+    font-family: Barlow;
+    font-size: 50px;
+    color: #30404D;
+    margin-top: -5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_1  p{
+    font-family: Barlow;
+    font-size: 20px;
+    color: #30404D;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.content_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    gap: 5%;
+}
+.content_2 p{
+    font-family: Barlow;
+    font-size: 20px;
+    color: #30404D;
+    margin: 1.5rem 0;
+   
+}
+.img5{
+   display: flex;
+    justify-self: flex-end;
+    height: auto;
+    object-fit: contain;
+   
+    margin-top: -28%;
+}
+.content_3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    gap: 5%;
+}
+.content_3 h1{
+    font-family: Barlow;
+    font-size: 50px;
+    color: #30404D;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_3 p{
+    font-family: Barlow;
+    font-size: 20px;
+    color: #30404D;
+    margin: 1.1rem 0;
+   
+}
+.subscription{
+   background-color: white;
+    border-radius: 20px;
+    padding: 5%;
+    margin-top: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subscription h2{
+  color: #98A8B3;
+}
+.subscription span{
+    font-family: Barlow;
+    font-size: 60px;
+    color: #3A7ABD;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.subscription_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+   
+    gap: 5%;
+    margin-left: -5%;
+    padding: 5%;
+    align-items: center;
+    justify-items: center;
+    
+    width: 100%;
+}
+.subscription_container h1{
+    font-family: Barlow;
+    font-size: 50px;
+    color: #30404D;
+    margin-top: -5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscription_container p{
+    font-family: Barlow;
+    font-size: 20px;
+    color: #30404D;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.subscription_container h3{
+  text-align: start;
+}
+.btn3{
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    font-family: Barlow;
+    font-size: 17px;
+    font-weight: 700;
+    color: #244779;
+    width: 90%;
+    padding: 15px 20px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    
+}
+
+@media screen and (max-width: 768px) {
+  .landingpage_container,
+.content,
+.heading1,
+.landingpage_container p,
+.button_container,
+.btn,
+.btn2,
+.img,
+.img1,
+.img2,
+.img3,
+.section1,
+.img4,
+.heading2,
+.content_1 p,
+.content_2,
+.content_2 p,
+.img5,
+.content_3,
+.content_3 h1,
+.content_3 p,
+.subscription,
+.subscription h2,
+.subscription span,
+.subscription_container,
+.subscription_container h1,
+.subscription_container p,
+.subscription_container h3,
+header,
+.footer,
+.btn3 {
+    display: none !important;
+}
+
+   
+  
+}

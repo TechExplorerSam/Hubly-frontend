@@ -1,0 +1,172 @@
+.user_edit_profile_container{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin-top: -55%;
+    margin-bottom: 20px;
+    padding: 20px;
+
+ 
+}
+.user_edit_profile_heading{
+    display: flex;
+    margin-left: 12%;
+    color: #636060;
+    font-family: Inter;
+  margin-top: -3%;
+    
+
+}
+.user_edit_profile_name_container{
+    border-bottom: 1px solid grey;
+    padding-left: 5%;
+    padding-top: 5%;
+    margin-left: 8%;
+    
+}
+.user_edit_profile_name_container h3{
+    width: 10%;
+    color: #184E7F;
+    border-bottom: 1px solid #184E7F;
+    padding-bottom: 0.5%;
+}
+
+.user_edit_profile_details_form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 5%;
+    padding-top: 3%;
+    margin-left: 8%;
+}
+
+.user_edit_profile_details_form label{
+    display: block;
+    font-weight:500;
+    color: #5E5E5E;
+}
+.user_edit_profile_details_form input{
+    width: 40%;
+    height: 45px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+.user_edit_profile_details_form button{
+    margin-left: 83%;
+    margin-bottom: 2%;
+}
+.save_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #184E7F; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    width: 15%;
+    height: 56%;
+    border-radius: 42px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    text-decoration: none;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  
+  }
+  
+  .input-container label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .input-with-tooltip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input-with-tooltip input {
+    
+  }
+  
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .info-icon {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: 2px solid gray;
+    border-radius: 50%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 240px; 
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: normal;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  .assigned-to-another-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (max-width: 768px) {
+    .user_edit_profile_container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5%;
+        margin-top:-210%;
+        margin-left: 12%;
+    }
+
+    .user_edit_profile_details_form input,
+    .user_edit_profile_details_form button {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .user_edit_profile_details_form label {
+        font-size: 15px;
+    }
+}
+

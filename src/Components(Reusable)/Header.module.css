@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  align-items: center;
+    justify-content: space-between;
+  padding: 1% 5%;
+  gap: 5%;
+}
+header img {
+    margin-top: 1%;
+  margin-left: 5%;
+
+}
+
+.buttoncontainer{
+  display: flex;
+  gap: 55%;
+    margin-right: 5%;
+}
+.btn1{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Barlow;
+    font-size: medium;
+    color: #244779;
+}
+
+.btn1:hover{
+    color: #244779;
+   
+    font-weight: bold;
+}
+.btn2{
+    background-color: #244779; 
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12%;
+    cursor: pointer;
+}
