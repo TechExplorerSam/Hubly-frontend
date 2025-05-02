@@ -138,7 +138,7 @@ const {ticketName}=useTicket();
        },
      });
  
-     const { assignedToAnotheruser, assignedUser, chats } = response.data;
+     const { assignedToAnotheruser = false, assignedUser = null, chats = [] } = response.data || {};
      const assignedToUserId = assignedUser?._id;
  
      console.log('Response:', response.data);
