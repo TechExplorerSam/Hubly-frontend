@@ -29,7 +29,7 @@ const ContactCenter = () => {
         }
       }
       const userId = localStorage.getItem('userId');
-      const response = await axios.get(`http://localhost:9001/Chat/getAllChatsForaTicket/${ticketId}`, {
+      const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chat/getAllChatsForaTicket/${ticketId}`, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token')
         }

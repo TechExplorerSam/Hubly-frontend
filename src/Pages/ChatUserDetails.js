@@ -23,7 +23,7 @@ const ChatUserDetails = ({ chat }) => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:9001/Chatbot/getchatbotuserdetails/${senderuserId}`);
+        const res = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chatbot/getchatbotuserdetails/${senderuserId}`);
         setUserDetails({
           name: res.data.data.chatbotregisteredUsername || '',
           phone: res.data.data.chatbotregisteredPhone || '',
@@ -41,7 +41,7 @@ const ChatUserDetails = ({ chat }) => {
 
   const fetchTeammates = async () => {
     try {
-      const res = await axios.get(`http://localhost:9001/TeamMember/getallteammembers/${userId}`, {
+      const res = await axios.get(`https://hubly-backend-ufnp.onrender.com//TeamMember/getallteammembers/${userId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -58,7 +58,7 @@ const ChatUserDetails = ({ chat }) => {
 
   const changeTicketStatus = async (selctedstatus) => {
     try {
-      const res = await axios.put(`http://localhost:9001/Ticket/updateticketstatus/${ticketId}`, {
+      const res = await axios.put(`https://hubly-backend-ufnp.onrender.com//Ticket/updateticketstatus/${ticketId}`, {
         ticketStatus: selctedstatus.value,
       }, {
         headers: {
@@ -73,7 +73,7 @@ const ChatUserDetails = ({ chat }) => {
 
   const assignTicketToTeammate = async (teammateId) => {
     try {
-      const res = await axios.post(`http://localhost:9001/Ticket/assigntickettoteammember/${ticketId}`, {
+      const res = await axios.post(`https://hubly-backend-ufnp.onrender.com//Ticket/assigntickettoteammember/${ticketId}`, {
         teamMemberId: teammateId,
         AdminUserId: userId,
       }, {

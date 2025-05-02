@@ -32,7 +32,7 @@ const UserDashboard = () => {
     const fetchTickets = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:9001/Ticket/getalltickets/${userId}`, {
+        const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Ticket/getalltickets/${userId}`, {
           params: {
             status: activeTab === 'All Tickets' ? null : activeTab.toLowerCase(),
           },
@@ -50,7 +50,7 @@ const UserDashboard = () => {
 const userDetailsPromises = uniqueUserIds.map(async (userId) => {
   try {
     console.log('Fetching user details for:', userId);
-    const res = await axios.get(`http://localhost:9001/Chatbot/getchatbotuserdetails/${userId}`, {
+    const res = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chatbot/getchatbotuserdetails/${userId}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     return { userId, details: res.data.data };
@@ -99,7 +99,7 @@ setUserDetailsMap(userDetailsObject);
     const fetchSearchResults = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:9001/Ticket/searchticket`, {
+        const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Ticket/searchticket`, {
           params: { searchQuery },
           headers: { Authorization: `Bearer ${token}` },
         });

@@ -28,7 +28,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:9001/User/registeranewuser', {
+      const response = await axios.post('https://hubly-backend-ufnp.onrender.com//User/registeranewuser', {
         firstName: formData.firstname,
         lastName: formData.lastname,
         username: formData.username,
