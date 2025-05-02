@@ -145,7 +145,7 @@ const {ticketName}=useTicket();
      console.log('Chat assigned to another user:', assignedToAnotherUser);
      console.log('Assigned to user ID:', assignedToUserId);
  
-     setAssignedToAnotherUser(assignedToAnotherUser && assignedUser?._id !== userId);
+     setAssignedToAnotherUser((assignedToAnotherUser==false) &&( assignedUser?._id !== userId));
  
    } catch (error) {
      console.error('Error checking assignment:', error);
