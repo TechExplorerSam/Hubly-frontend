@@ -108,9 +108,15 @@ const {ticketName}=useTicket();
 
  const checkIfChatAssignedToAnotherUser = async () => {
    const userFromStorage = localStorage.getItem('user');
-   const user = JSON.parse(userFromStorage);
    const userId = localStorage.getItem('userId');
    const ticketId = localStorage.getItem('ticketId');
+ 
+   if (!userFromStorage || !userId || !ticketId) {
+     console.warn('Missing user or ticket information');
+     return;
+   }
+ 
+   const user = JSON.parse(userFromStorage);
    const isTeamMember = user?.isTeamMember;
  
    console.log('User is Team Member:', isTeamMember);
@@ -139,16 +145,17 @@ const {ticketName}=useTicket();
      console.log('Chat assigned to another user:', assignedToAnotheruser);
      console.log('Assigned to user ID:', assignedToUserId);
  
-     setAssignedToAnotherUser(assignedToAnotheruser && assignedToUserId !== userId);
+     setAssignedToAnotherUser(!!assignedToAnotheruser && assignedToUserId !== userId);
  
    } catch (error) {
      console.error('Error checking assignment:', error);
    }
  };
  
-useEffect(() => {
-  checkIfChatAssignedToAnotherUser();
-}, [chat]); 
+ useEffect(() => {
+   checkIfChatAssignedToAnotherUser();
+ }, [chat]);  
+ 
 
    return (
       <div className="chat-window">
