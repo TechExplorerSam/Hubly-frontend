@@ -138,14 +138,14 @@ const {ticketName}=useTicket();
        },
      });
  
-     const { assignedToAnotheruser = false, assignedUser = null, chats = [] } = response.data || {};
+     const { assignedToAnotherUser = false, assignedUser = null, chats = [] } = response.data || {};
      const assignedToUserId = assignedUser?._id;
  
      console.log('Response:', response.data);
-     console.log('Chat assigned to another user:', assignedToAnotheruser);
+     console.log('Chat assigned to another user:', assignedToAnotherUser);
      console.log('Assigned to user ID:', assignedToUserId);
  
-     setAssignedToAnotherUser(!!assignedToAnotheruser && assignedToUserId !== userId);
+     setAssignedToAnotherUser(assignedToAnotherUser && assignedUser?._id !== userId);
  
    } catch (error) {
      console.error('Error checking assignment:', error);
