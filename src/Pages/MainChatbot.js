@@ -28,7 +28,7 @@ const MainChatbot = () => {
   });
  
   useEffect(() => {
-    axios.get(`https://hubly-backend-ufnp.onrender.com//Chatbot/getchatbotstylesforuser`,{
+    axios.get(`https://hubly-backend-ufnp.onrender.com/Chatbot/getchatbotstylesforuser`,{
       params:{
         AdminId: localStorage.getItem('userId') || 'Anonymous'
       }
@@ -83,14 +83,14 @@ const MainChatbot = () => {
 
     try {
       if (showFormType === 'register') {
-      const response=  await axios.post('https://hubly-backend-ufnp.onrender.com//Chatbot/registeranewuserthroughchatbot', formData);
+      const response=  await axios.post('https://hubly-backend-ufnp.onrender.com/Chatbot/registeranewuserthroughchatbot', formData);
         if (response.status === 200) {
           console.log('Chatbot User registered successfully:', response.data);
           alert('Chatbot User registered successfully');
         }
         
       } else if (showFormType === 'login') {
-        const response= await axios.post('https://hubly-backend-ufnp.onrender.com//Chatbot/loginchatbotuser', {
+        const response= await axios.post('https://hubly-backend-ufnp.onrender.com/Chatbot/loginchatbotuser', {
           Email:formData.chatbotregisteredEmail,
           FullName:formData.chatbotregisteredUsername
         });
@@ -125,7 +125,7 @@ const MainChatbot = () => {
         return;
       }
       console.log('Fetching initial messages for ticket ID:', currentTicketId);
-      const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chat/getAllChatsForChatbotUser/${currentTicketId}`);
+      const response = await axios.get(`https://hubly-backend-ufnp.onrender.com/Chat/getAllChatsForChatbotUser/${currentTicketId}`);
       console.log('Initial messages response:', response.data);
       const formattedMessages = (response?.data?.chats?.Messages || [])
       .filter(msg => msg._id&& ((msg.senderRoleRef === "User"|| msg.senderRoleRef === "TeamMember"))|| msg.senderRoleRef === "ChatbotUser") 
@@ -164,7 +164,7 @@ useEffect(() => {
       console.log('Sending message to server:', input);
        console.log('Current Ticket ID:', currentTicketId);
       if (!currentTicketId) {
-        const response = await axios.post('https://hubly-backend-ufnp.onrender.com//Chatbot/createanewchatwithuser', {
+        const response = await axios.post('https://hubly-backend-ufnp.onrender.com/Chatbot/createanewchatwithuser', {
           ticketDescription: input,
           ticketPostedTime: new Date().toISOString(),
           ticketCreatedByUser: localStorage.getItem('chatbotuserId') || 'Anonymous'
@@ -186,7 +186,7 @@ useEffect(() => {
         startPolling(currentTicketId);
         console.log('inside ticket id', currentTicketId);
      console.log('chatbotuserId', localStorage.getItem('chatbotuserId'));
-    const response=  await axios.post(`https://hubly-backend-ufnp.onrender.com//Chatbot/sendmessagetochat/${currentTicketId}`, {
+    const response=  await axios.post(`https://hubly-backend-ufnp.onrender.com/Chatbot/sendmessagetochat/${currentTicketId}`, {
         userId: localStorage.getItem('chatbotuserId') || 'Anonymous',
         chatId: currentTicketId,
         chatMessage: input,
@@ -215,7 +215,7 @@ useEffect(() => {
   
     refreshingRef.current = setInterval(async () => {
       try {
-        const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chat/getAllChatsForChatbotUser/${currentTicketId}`);
+        const response = await axios.get(`https://hubly-backend-ufnp.onrender.com/Chat/getAllChatsForChatbotUser/${currentTicketId}`);
         if (response.status !== 200) return;
   
         const chatStatusFromServer = response?.data?.chats?.ChatStatus || 'Ongoing';
@@ -253,7 +253,7 @@ useEffect(() => {
   //   }
   //   refreshingRef.current = setInterval(async () => {
   //     try {
-  //       const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chat/getAllChatsForChatbotUser/${currentTicketId}`);
+  //       const response = await axios.get(`https://hubly-backend-ufnp.onrender.com/Chat/getAllChatsForChatbotUser/${currentTicketId}`);
   //       if (response.status !== 200) return;
   //       const chatStatusFromServer = response?.data?.chats?.ChatStatus || 'Ongoing';
   //       setChatStatus(chatStatusFromServer);

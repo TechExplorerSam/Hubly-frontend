@@ -19,7 +19,7 @@ const TeamMembers = () => {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const res = await axios.get(`https://hubly-backend-ufnp.onrender.com//TeamMember/getallteammembers/${userId}`, {
+        const res = await axios.get(`https://hubly-backend-ufnp.onrender.com/TeamMember/getallteammembers/${userId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -76,7 +76,7 @@ const TeamMembers = () => {
     if (editIndex !== null && editMemberId) {
       try {
         const res = await axios.put(
-          `https://hubly-backend-ufnp.onrender.com//TeamMember/updateteammemberbyid/${editMemberId}`,
+          `https://hubly-backend-ufnp.onrender.com/TeamMember/updateteammemberbyid/${editMemberId}`,
           {
             adminUserId: userId,
             UserName: newMember.FullName,
@@ -105,7 +105,7 @@ const TeamMembers = () => {
     } else {
       try {
         const res = await axios.post(
-          `https://hubly-backend-ufnp.onrender.com//TeamMember/createnewteammember`,
+          `https://hubly-backend-ufnp.onrender.com/TeamMember/createnewteammember`,
           {
             createdAdminId: userId,
             UserName: newMember.FullName,
@@ -151,7 +151,7 @@ const TeamMembers = () => {
   const handleConfirmDelete = async () => {
     try {
       const memberIdToDelete = teamMembers[editIndex]._id; 
-      const res = await axios.delete(`https://hubly-backend-ufnp.onrender.com//TeamMember/deleteteammemberbyid/${memberIdToDelete}`, {
+      const res = await axios.delete(`https://hubly-backend-ufnp.onrender.com/TeamMember/deleteteammemberbyid/${memberIdToDelete}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

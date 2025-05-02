@@ -56,7 +56,7 @@ const {ticketName}=useTicket();
       setReplyText('');
 
       try {
-         await axios.post('https://hubly-backend-ufnp.onrender.com//Chatbot/sendreplytochatbotuser', {
+         await axios.post('https://hubly-backend-ufnp.onrender.com/Chatbot/sendreplytochatbotuser', {
             chatId: chat._id,
             replyMessage: replyText,
             replyUserRole: 'User',
@@ -72,7 +72,7 @@ const {ticketName}=useTicket();
     const userId = localStorage.getItem('userId');
     const ticketId = localStorage.getItem('ticketId');
 
-    axios.post('https://hubly-backend-ufnp.onrender.com//Chat/classifychatasmissedchat', {
+    axios.post('https://hubly-backend-ufnp.onrender.com/Chat/classifychatasmissedchat', {
        userId,
        ticketId,
     })
@@ -122,7 +122,7 @@ const {ticketName}=useTicket();
    }
  
    try {
-     const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//Chat/checkifchatassignedtoanotheruser`, {
+     const response = await axios.get(`https://hubly-backend-ufnp.onrender.com/Chat/checkifchatassignedtoanotheruser`, {
        params: {
          userId,
          ticketId,

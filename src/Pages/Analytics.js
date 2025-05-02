@@ -17,7 +17,7 @@ const Analytics = () => {
 
   const fetchAnalyticsData = async () => {
     try {
-      const response = await axios.get('https://hubly-backend-ufnp.onrender.com//Analytics/getanalytics', {
+      const response = await axios.get('https://hubly-backend-ufnp.onrender.com/Analytics/getanalytics', {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token')
         }

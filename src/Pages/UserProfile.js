@@ -32,7 +32,7 @@ const navigate = useNavigate();
  
   const fetchUserDetails = async () => {
     try {
-      const response = await axios.get(`https://hubly-backend-ufnp.onrender.com//User/getUserDetails/${userId}`, {
+      const response = await axios.get(`https://hubly-backend-ufnp.onrender.com/User/getUserDetails/${userId}`, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token')
         }
@@ -97,7 +97,7 @@ const navigate = useNavigate();
        const FullName = firstName + ' ' + lastName;
        const phone = formData.phone;
         const userId = localStorage.getItem('userId');
-     try{  const response= await axios.put(`https://hubly-backend-ufnp.onrender.com//User/updateuser/${userId}`, { FullName,phone }, {
+     try{  const response= await axios.put(`https://hubly-backend-ufnp.onrender.com/User/updateuser/${userId}`, { FullName,phone }, {
           headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
           }
@@ -120,7 +120,7 @@ const navigate = useNavigate();
         alert('Error updating profile');
       }
       }
-      await axios.put(`https://hubly-backend-ufnp.onrender.com//User/updateuser/${userId}`, { firstName, lastName }, {
+      await axios.put(`https://hubly-backend-ufnp.onrender.com/User/updateuser/${userId}`, { firstName, lastName }, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token')
         }
@@ -149,7 +149,7 @@ const navigate = useNavigate();
     };
 
     try {
-      await axios.put(`https://hubly-backend-ufnp.onrender.com//User/updateemailorpassword/${userId}`, credentials, {
+      await axios.put(`https://hubly-backend-ufnp.onrender.com/User/updateemailorpassword/${userId}`, credentials, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token')
         }

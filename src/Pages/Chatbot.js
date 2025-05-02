@@ -32,7 +32,7 @@ const Chatbot = () => {
     const fetchConfig = async () => {
       try {
         console.log("Starting API call..."); 
-        const response = await axios.get('https://hubly-backend-ufnp.onrender.com//Chatbot/getchatbotstylesforuser', {
+        const response = await axios.get('https://hubly-backend-ufnp.onrender.com/Chatbot/getchatbotstylesforuser', {
           params: {AdminId: creatingAdminId }
         });
         
@@ -106,7 +106,7 @@ const Chatbot = () => {
       ...chatbotConfig,
       creatingAdminId: creatingAdminId
     });
-    axios.post('https://hubly-backend-ufnp.onrender.com//Chatbot/customizechatbotstyles', {
+    axios.post('https://hubly-backend-ufnp.onrender.com/Chatbot/customizechatbotstyles', {
       ...chatbotConfig,
       creatingAdminId: creatingAdminId
     })
