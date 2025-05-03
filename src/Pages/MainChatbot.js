@@ -315,7 +315,7 @@ useEffect(() => {
 
       {isOpen && (
         <div className="chatbot-window">
-          <div className="chatbot-header" style={{ backgroundColor: styles.headerColor }}>
+          <div className="chatbot-header" style={{ backgroundColor: styles.headerColor ||'#33475B'}}>
             <div className="header-left">
               <img src="/Chatbot.png" alt="Chatbot" className="chatbot-icon-small" />
               <span>Hubly</span>
