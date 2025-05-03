@@ -15,7 +15,7 @@ const MainChatbot = () => {
   const [chatStatus, setChatStatus] = useState('Ongoing');
   let currentTicketId = chatId || localStorage.getItem('chatbotTicketId');
   const [styles, setStyles] = useState({
-    headerColor: '#4CAF50',
+    headerColor: '#33475B',
     backgroundColor: '#f1f1f1',
     userMessage: 'User',
     welcomeMessage: 'Welcome to our service!',
