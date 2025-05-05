@@ -29,9 +29,7 @@ const MainChatbot = () => {
  
   useEffect(() => {
     axios.get(`https://hubly-backend-ufnp.onrender.com/Chatbot/getchatbotstylesforuser`,{
-      params:{
-        AdminId: localStorage.getItem('userId') || 'Anonymous'
-      }
+     
     })
       .then(res => setStyles(
         {
