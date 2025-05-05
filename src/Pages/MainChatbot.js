@@ -318,7 +318,7 @@ useEffect(() => {
               <img src="/Chatbot.png" alt="Chatbot" className="chatbot-icon-small" />
               <span>Hubly</span>
             </div>
-            <button className="close-button" onClick={handleToggleChat}>×</button>
+         
           </div>
 
           <div className="chatbot-body" style={{ backgroundColor: styles.backgroundColor }}>
