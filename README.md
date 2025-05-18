@@ -43,7 +43,7 @@ Clone the repo:
 For testing purposes
 Admin
 SAMPATH--username
-Sampath@12345--password
+Sampath@123456--password
 
 
 
