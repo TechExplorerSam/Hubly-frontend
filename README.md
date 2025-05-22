@@ -42,8 +42,12 @@ Clone the repo:
 5. Demo Credentials
 For testing purposes
 Admin
+MATHA--firstname
+SAMPATH--lastname
 SAMPATH--username
-Sampath@123456--password
+Sampath@123456--password and confirm password
+
+Note: these are the credentials i you want to register in the system
 
 
 
