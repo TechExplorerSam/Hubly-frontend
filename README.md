@@ -47,7 +47,7 @@ SAMPATH--lastname
 SAMPATH--username
 Sampath@123456--password and confirm password
 
-Note: these are the credentials i you want to register in the system
+Note: these are the credentials i you want to register in the system there is no user currently in the system in the deployment you need to register yourself to operate
 
 
 
